@@ -126,7 +126,7 @@ func GenerateISO9660(instDir, name string, y *limayaml.LimaYAML, udpDNSLocalPort
 		Name:               name,
 		User:               u.Username,
 		UID:                uid,
-		Home:               fmt.Sprintf("/home/%s.linux", u.Username),
+		Home:               fmt.Sprintf("/home/%s", u.Username),
 		GuestInstallPrefix: *y.GuestInstallPrefix,
 		UpgradePackages:    *y.UpgradePackages,
 		Containerd:         Containerd{System: *y.Containerd.System, User: *y.Containerd.User},

@@ -121,7 +121,7 @@ func Validate(y LimaYAML, warn bool) error {
 		return fmt.Errorf("internal error (not an error of YAML): %w", err)
 	}
 	// reservedHome is the home directory defined in "cidata.iso:/user-data"
-	reservedHome := fmt.Sprintf("/home/%s.linux", u.Username)
+	reservedHome := fmt.Sprintf("/home/%s", u.Username)
 
 	for i, f := range y.Mounts {
 		if !filepath.IsAbs(f.Location) && !strings.HasPrefix(f.Location, "~") {

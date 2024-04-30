@@ -52,7 +52,7 @@ func TestFillDefault(t *testing.T) {
 	user, err := osutil.LimaUser(false)
 	assert.NilError(t, err)
 
-	guestHome := fmt.Sprintf("/home/%s.linux", user.Username)
+	guestHome := fmt.Sprintf("/home/%s", user.Username)
 	instName := "instance"
 	instDir := filepath.Join(limaHome, instName)
 	filePath := filepath.Join(instDir, filenames.LimaYAML)

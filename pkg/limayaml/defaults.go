@@ -761,7 +761,7 @@ func executeGuestTemplate(format, instDir string) (bytes.Buffer, error) {
 	if err == nil {
 		user, _ := osutil.LimaUser(false)
 		data := map[string]string{
-			"Home": fmt.Sprintf("/home/%s.linux", user.Username),
+			"Home": fmt.Sprintf("/home/%s", user.Username),
 			"Name": filepath.Base(instDir),
 			"UID":  user.Uid,
 			"User": user.Username,
